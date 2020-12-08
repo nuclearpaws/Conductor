@@ -1,13 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Conductor.Core\Conductor.Core.csproj"/>
+    <ProjectReference Include="..\Conductor.SharedKernel\Conductor.SharedKernel.csproj"/>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.10"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.10"/>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.10"/>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Conductor.SharedKernel\Conductor.SharedKernel.csproj"/>
-  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
 </Project>

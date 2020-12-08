@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Conductor.Core.Dependencies;
-using Conductor.Core.Services.BasicImplementations;
 
 namespace Conductor.Core
 {
@@ -9,10 +7,7 @@ namespace Conductor.Core
     {
         public static IServiceCollection AddCore(this IServiceCollection @this, IConfiguration configuration)
         {
-            // Basic Implementations:
-            @this.AddSingleton<IDateTimeProvider, BasicDateTimeProvider>();
-
-            // TODO: Add DI here:
+            // Register Core Classes for Dependency Injection Here:
 
             return @this;
         }
